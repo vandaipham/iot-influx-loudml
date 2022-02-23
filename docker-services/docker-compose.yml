@@ -1,13 +1,13 @@
 # This is a Docker Compose file to work with Loud ML and an InfluxDB:1.8 stack.
 
-version: "3.6"
+version: "2"
 
 services:
   loudml:
     image: loudml/loudml
     volumes:
       - ./etc/loudml.yml:/etc/loudml/config.yml:ro
-      - ./var/loudml:/var/lib/loudml
+      - ./var/loudml:/var/lib/loudml:Z
     ports:
       - "8077:8077"
     depends_on:
