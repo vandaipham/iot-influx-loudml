@@ -2,6 +2,9 @@
 
 In this repository, I would like to share you an example of using InfluxDB:1.8 for saving sensor data and loudml to create timeseries prediciton models.
 
+Why we use InlfuxDB? InfluxDB is one of the best database to save timeseries data. Influx provides more services such as chronograf, kapacitor, telegraf.
+Moreover, we can explore data via brower and do some basic functions.
+
 # IoT Device Development:
 1.  An IoT Device: WiFi module - NodeMCU, DHT22 or 11 (Temperature and Humidity Sensor).
 2. Arduino IDE or VS code with arduino extension. See [esp8266/Arduino: ESP8266 core for Arduino (github.com)](https://github.com/esp8266/Arduino) to add ESP core to Arduino IDE.
