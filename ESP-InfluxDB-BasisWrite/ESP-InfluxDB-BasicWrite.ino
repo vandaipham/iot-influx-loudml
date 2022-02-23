@@ -1,6 +1,6 @@
 /**
  * Basic Write Example code for InfluxDBClient library for Arduino
- * Data can be immediately seen in a InfluxDB UI: wifi_status measurement
+ * Data can be immediately seen in a InfluxDB UI: wifi_status measurement, and DHT sensor (temperature and humidity)
  * Enter WiFi and InfluxDB parameters below
  *
  * Measures signal level of the actually connected WiFi network
