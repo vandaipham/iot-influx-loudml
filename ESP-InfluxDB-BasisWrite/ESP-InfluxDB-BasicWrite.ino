@@ -27,13 +27,13 @@ ESP8266WiFiMulti wifiMulti;
 DHT dht(DHTPIN, DHTTYPE);
 
 // WiFi AP SSID
-#define WIFI_SSID "bonch"
+#define WIFI_SSID "xxx"
 // WiFi password
-#define WIFI_PASSWORD "999999999"
+#define WIFI_PASSWORD "xxx"
 
 // InfluxDB  server url. Don't use localhost, always server name or ip address.
 // E.g. http://192.168.1.48:8086 (In InfluxDB 2 UI -> Load Data -> Client Libraries), 
-#define INFLUXDB_URL "http://20.111.9.42:8086"
+#define INFLUXDB_URL "http://yourIPaddress:8086"
 // InfluxDB 2 server or cloud API authentication token (Use: InfluxDB UI -> Load Data -> Tokens -> <select token>)
 // #define INFLUXDB_TOKEN "toked-id"
 // InfluxDB 2 organization id (Use: InfluxDB UI -> Settings -> Profile -> <name under tile> )
@@ -45,8 +45,8 @@ DHT dht(DHTPIN, DHTTYPE);
 #define INFLUXDB_DB_NAME "IoTDB"
 
 // InfluxDB v1 username vs password
-#define INFLUXDB_USER "iotuser"
-#define INFLUXDB_PASSWORD "IoTSUT0112210"
+#define INFLUXDB_USER "xxx"
+#define INFLUXDB_PASSWORD "xxx"
 
 // InfluxDB client instance
 // InfluxDBClient client(INFLUXDB_URL, INFLUXDB_ORG, INFLUXDB_BUCKET, INFLUXDB_TOKEN);
