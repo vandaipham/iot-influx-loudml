@@ -5,9 +5,10 @@ version: "2"
 services:
   loudml:
     image: loudml/loudml
+    user: root
     volumes:
       - ./etc/loudml.yml:/etc/loudml/config.yml:ro
-      - ./var/loudml:/var/lib/loudml:Z
+      - ./var/loudml:/var/lib/loudml
     ports:
       - "8077:8077"
     depends_on:
