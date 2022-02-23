@@ -19,7 +19,8 @@ Moreover, we can explore data via brower and do some basic functions.
 
 
 # How to use
-1. cd to docker-services foler and run docker-compose to create services : loudml, influxdb, chronograf, kapacitor, and telegraf. (run command: docker-compose up -d).
+1. Docker need to be installed in your computer.
+2. cd to docker-services foler and run docker-compose to create services : loudml, influxdb, chronograf, kapacitor, and telegraf. (run command: docker-compose up -d).
 3. Open http://yourIPaddress:8888/ to create a new database to save the sensor data.
 4. Open http://yourIPaddress:8888/sources/0/admin-influxdb/databases to create a database (for example with a name "IoTDB")
 5. Open http://yourIPaddress:8888/sources/0/admin-influxdb/users to create a user.
