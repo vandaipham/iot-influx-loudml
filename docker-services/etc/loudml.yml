@@ -1,0 +1,23 @@
+---
+datasources:
+  - name: influx
+    type: influxdb
+    addr: influxdb:8086
+    database: telegraf
+    retention_policy: monitor
+  - name: loudml
+    type: influxdb
+    addr: influxdb:8086
+    database: loudml
+    retention_policy: autogen
+    measurement: loudml
+  - name: kapacitor
+    type: influxdb
+    addr: kapacitor:9092
+    database: from_loudml
+
+storage:
+  path: /var/lib/loudml
+
+server:
+  listen: 0.0.0.0:8077
