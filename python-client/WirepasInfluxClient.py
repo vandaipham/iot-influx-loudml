@@ -35,9 +35,6 @@ def createDataUpload(node, sensorData):
     myDict = {"measurement": "Multisensor", "tags": {"Node": node}, "fields": sensorData}
     return [myDict]
 
-myDict = {'temperature':0, 'humidity':0, 'sound_level':0, 'light_level':0, 'UV_Index':0,
-            'presure':0, 'eco2':0, 'tvoc':0, 'magnetic':0, 'battery': 0}
-
 
 def parseMsg(a):
     myData = {'temperature':0, 'humidity':0, 'sound level':0, 'lightLevel':0, 'UV Index':0,
