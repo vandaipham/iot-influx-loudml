@@ -13,7 +13,7 @@ usernameMQTT = 'mqttmasteruser'
 passwordMQTT = '3mERrV0z7rzUqWVgWIlSsQxjl'
 
 # Connect to InfluxDB
-URL = "http://192.168.1.120:8888"
+URL = "http://192.168.1.120:8086"
 username = ''
 password = ''
 
