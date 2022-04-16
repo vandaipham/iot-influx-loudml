@@ -9,8 +9,8 @@ import wirepas_mesh_messaging as wmm
 # Connect to MQTT broker.
 host = '192.168.1.8'
 port = 1883
-username = 'mqttmasteruser'
-password = '3mERrV0z7rzUqWVgWIlSsQxjl'
+usernameMQTT = 'mqttmasteruser'
+passwordMQTT = '3mERrV0z7rzUqWVgWIlSsQxjl'
 
 # Connect to InfluxDB
 URL = "http://192.168.1.120:8888"
@@ -73,6 +73,7 @@ def on_message(client, userdata, msg):
     #print(msg.topic+" "+str(msg.payload))
     message = wmm.ReceivedDataEvent.from_payload(msg.payload)
     if (message.source_endpoint == 1 and message.destination_endpoint ==1):
+        print(parseMsg(message.data_payload))
         myUpload = createDataUpload(node=message.source_address, sensorData=parseMsg(message.data_payload))
         write_api.write(my_bucket, "-", myUpload)
 
@@ -81,7 +82,7 @@ def on_message(client, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.username_pw_set(username, password)
+client.username_pw_set(usernameMQTT, passwordMQTT)
 client.connect(host, port, 20)
 
 # Blocking call that processes network traffic, dispatches callbacks and
